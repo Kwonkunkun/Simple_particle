@@ -12,7 +12,7 @@ export class Rain {
 
     draw(ctx) {
         ctx.beginPath();
-        ctx.strokeStyle = "white";
+        ctx.strokeStyle = "#ffffff80";
         ctx.moveTo(this.x, this.y);
         ctx.lineTo(this.x, this.y + this.l);
         ctx.stroke();
@@ -26,8 +26,8 @@ export class Rain {
         if (this.y > this.stageHeight) {
             this.x = Math.floor(Math.random() * this.stageWidth) + 5;
             this.y = Math.floor(Math.random() * 100) - 100;
+            this.vy = Math.floor(Math.random() * 12) + 4;
             this.l = Math.floor(Math.random() * 30) + 1;
-            this.v = Math.floor(Math.random() * 12) + 4;
         }
     }
 }

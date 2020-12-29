@@ -20,21 +20,32 @@ canvas {
     margin: 0;
 }
 
-.volumeBtn {
+.uiBox {
+    display: flex;
+    justify-content: space-around;
     position: absolute;
-    left: 90%;
+    left: 85%;
     top: 10%;
+}
+
+.volumeBtn,
+.weather,
+.background {
     font-size: 24px;
     color: rgba(255, 255, 255, 0.7);
     background-color: transparent;
     border: 0;
     outline: transparent;
     outline: 0;
+    transition: transform 300ms ease-in;
 }
 
-.volumeBtn:hover {
+.volumeBtn:hover,
+.weather:hover,
+.background:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
 }
 
 .nextBtn {
@@ -53,9 +64,12 @@ canvas {
     font-style: oblique;
     color: #f9ca24;
     text-shadow: 2px 2px 0 #7a7a7a;
+
+    transition: transform 300ms ease-in;
 }
 
 .nextBtn:hover {
     cursor: pointer;
     color: wheat;
+    transform: scale(1.1);
 }
