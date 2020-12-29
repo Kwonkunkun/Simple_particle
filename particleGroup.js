@@ -46,7 +46,7 @@ export class ParticleGroup {
                             positionX * 4,
                             positionY * 4,
                             color,
-                            2
+                            4
                         )
                     );
                 }
