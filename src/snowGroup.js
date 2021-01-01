@@ -1,6 +1,7 @@
-import { Snow } from "./snow.js";
+"use strict";
+import Snow from "./snow.js";
 
-export class SnowGroup {
+export default class SnowGroup {
     constructor(stageWidth, stageHeight) {
         this.stageWidth = stageWidth;
         this.stageHeight = stageHeight;
@@ -10,7 +11,7 @@ export class SnowGroup {
     init() {
         this.rainGroup = (() => {
             let temp = new Array();
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 30; i++) {
                 const rain = new Snow(
                     Math.random() * this.stageHeight,
                     Math.random() * this.stageHeight,

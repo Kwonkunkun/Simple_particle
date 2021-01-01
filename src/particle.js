@@ -1,4 +1,5 @@
-export class Particle {
+"use strict";
+export default class Particle {
     //가운데에 두려고.. ㅋㅋㅋㅋㅋㅋ
     constructor(
         stageWidth,

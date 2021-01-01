@@ -1,7 +1,7 @@
 "use strict";
-import { Particle } from "./particle.js";
+import Particle from "./particle.js";
 
-export class ParticleGroup {
+export default class ParticleGroup {
     constructor(ctx, stageWidth, stageHeight, png, width, height) {
         this.ctx = ctx;
         this.stageWidth = stageWidth;

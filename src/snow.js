@@ -1,4 +1,5 @@
-export class Snow {
+"use strict";
+export default class Snow {
     constructor(x, y, radius, v) {
         this.x = x;
         this.y = y;

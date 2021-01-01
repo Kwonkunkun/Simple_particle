@@ -1,4 +1,5 @@
-export class Rain {
+"use strict";
+export default class Rain {
     constructor(x, y, l, v) {
         this.x = x;
         this.y = y;
@@ -12,7 +13,7 @@ export class Rain {
 
     draw(ctx) {
         ctx.beginPath();
-        ctx.strokeStyle = "#ffffff80";
+        ctx.strokeStyle = "#ffffff";
         ctx.moveTo(this.x, this.y);
         ctx.lineTo(this.x, this.y + this.l);
         ctx.stroke();

@@ -1,6 +1,7 @@
-import { Rain } from "./rain.js";
+"use strict";
+import Rain from "./rain.js";
 
-export class RainGroup {
+export default class RainGroup {
     constructor(stageWidth, stageHeight) {
         this.stageWidth = stageWidth;
         this.stageHeight = stageHeight;
@@ -10,7 +11,7 @@ export class RainGroup {
     init() {
         this.rainGroup = (() => {
             let temp = new Array();
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 30; i++) {
                 const rain = new Rain(
                     Math.random() * this.stageHeight,
                     Math.random() * this.stageHeight,
