@@ -70,7 +70,7 @@ class App {
             this.SnowGroup.draw(this.ctx);
         }
 
-        this.particleGroup.draw(this.mouse);
+        this.particleGroup.draw(this.ctx, this.mouse);
 
         window.requestAnimationFrame(this.animate.bind(this));
     }

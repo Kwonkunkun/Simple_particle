@@ -3,7 +3,6 @@ import Particle from "./particle.js";
 
 export default class ParticleGroup {
     constructor(ctx, stageWidth, stageHeight, png, width, height) {
-        this.ctx = ctx;
         this.stageWidth = stageWidth;
         this.stageHeight = stageHeight;
         this.pngWidth = width;
@@ -12,7 +11,7 @@ export default class ParticleGroup {
         png.height = height;
 
         //데이터를 얻어오기 위해서는 일단 그려놔야함
-        this.ctx.drawImage(png, 0, 0, this.pngWidth, this.pngHeight);
+        ctx.drawImage(png, 0, 0, this.pngWidth, this.pngHeight);
         this.data = ctx.getImageData(0, 0, this.pngWidth, this.pngHeight);
         //여기서 지워줘도 되고 안지워줘도 되고 맘대루
 
@@ -60,9 +59,9 @@ export default class ParticleGroup {
         this.init();
     }
 
-    draw(mouse) {
+    draw(ctx, mouse) {
         for (let i = 0; i < this.particleGroup.length; i++) {
-            this.particleGroup[i].draw(this.ctx, mouse);
+            this.particleGroup[i].draw(ctx, mouse);
         }
     }
 }
