@@ -8,7 +8,7 @@ export default class Background {
         this.width = width;
         this.height = height;
         this.backgroundImg = new Image(this.width, this.height);
-        this.backgroundImg.src = "./Img/_background1.png";
+        this.backgroundImg.src = "./Img/background1.png";
         this.backgroundChangBtn = document.querySelector(".background");
         this.icon = this.backgroundChangBtn.querySelector("i");
         this.num = 1;
@@ -27,7 +27,7 @@ export default class Background {
             if (this.num > 3) {
                 this.num = 1;
             }
-            this.backgroundImg.src = `./Img/_background${this.num}.png`;
+            this.backgroundImg.src = `./Img/background${this.num}.png`;
         });
     }
 
