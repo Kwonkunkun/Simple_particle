@@ -22,9 +22,8 @@ canvas {
 
 .uiBox {
     display: flex;
-    justify-content: space-around;
     position: absolute;
-    left: 85%;
+    left: 60%;
     top: 10%;
 }
 

@@ -13,7 +13,7 @@ export default class SnowGroup {
             let temp = new Array();
             for (let i = 0; i < 30; i++) {
                 const rain = new Snow(
-                    Math.random() * this.stageHeight,
+                    Math.random() * this.stageWidth,
                     Math.random() * this.stageHeight,
                     Math.random() * 5 + 2,
                     Math.random() * 3 + 1

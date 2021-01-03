@@ -45,7 +45,7 @@ export default class ParticleGroup {
                             positionX * 4,
                             positionY * 4,
                             color,
-                            4
+                            3
                         )
                     );
                 }
@@ -60,6 +60,9 @@ export default class ParticleGroup {
     }
 
     draw(ctx, mouse) {
+        if (this.data === undefined) {
+            this.init();
+        }
         for (let i = 0; i < this.particleGroup.length; i++) {
             this.particleGroup[i].draw(ctx, mouse);
         }
