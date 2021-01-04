@@ -37,8 +37,14 @@ class App {
         this.isMusicOn = false;
         this.weatherBtn = document.querySelector(".weather");
         this.weatherIcon = this.weatherBtn.querySelector("i");
+        this.nextBtn = document.querySelector(".nextBtn");
         this.isRain = true;
         this.resize();
+
+        //모바일일때는 호버가 안됨
+        if (this.isMobile === false) {
+            this.nextBtn.classList.add("PC");
+        }
 
         //event init
         this.eventInit();
@@ -164,7 +170,7 @@ async function loadData() {
 window.onload = (() => {
     console.log("onload");
 
-    //이미지 파일이 큰듯 하니.. 먼저 로드
+    //파일 미리 로드
     loadData()
         .then((img) => {
             const app = new App(img);
@@ -172,5 +178,4 @@ window.onload = (() => {
         .catch((error) => {
             console.log(error);
         });
-    //const app = new App(png);
 })();
