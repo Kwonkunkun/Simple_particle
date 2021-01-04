@@ -15,7 +15,7 @@ export default class Preloader {
         if (imageArray && imageArray.length > index) {
             let img = new Image();
             img.onload = function () {
-                preload(imageArray, index + 1);
+                Preloader.parallel(imageArray, index + 1);
             };
             img.src = imageArray[index];
         }
