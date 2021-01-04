@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Pixel";
-    src: url(./font/pfont.ttf) format("truetype");
+    src: local("Pixel"), url(./font/pfont.ttf) format("truetype");
 }
 
 /*main section*/
@@ -101,7 +101,6 @@ canvas {
 }
 
 .loading-container.fade-out {
-    font-family: Pixel;
     animation: fadeout 5s;
     -moz-animation: fadeout 5s; /* Firefox */
     -webkit-animation: fadeout 5s; /* Safari and Chrome */
@@ -115,6 +114,7 @@ canvas {
 }
 
 .wavy span {
+    font-family: Pixel;
     position: relative;
     display: inline-block;
     color: white;
