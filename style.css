@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    background-color: black;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -45,6 +46,9 @@ canvas {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.5);
     transform: scale(1.2);
+}
+
+@media screen and (hover: none) and (pointer: coarse) {
 }
 
 .nextBtn {
