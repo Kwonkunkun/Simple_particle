@@ -3,6 +3,11 @@
     src: local("Pixel"), url(./font/pfont.ttf) format("truetype");
 }
 
+button {
+    margin-right: 8px;
+    padding: 0;
+}
+
 /*main section*/
 .main-container {
     display: none;
@@ -38,8 +43,9 @@ canvas {
 .uiBox {
     display: flex;
     position: absolute;
-    left: 60%;
-    top: 10%;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%);
 }
 
 .volumeBtn,
@@ -75,9 +81,9 @@ canvas {
     transform: translateX(-50%);
 
     font-family: Pixel;
-    font-size: 40px;
+    font-size: 70px;
     font-style: oblique;
-    color: #f9ca24;
+    color: #ffa801;
     text-shadow: 2px 2px 0 #7a7a7a;
 
     transition: transform 300ms ease-in;
@@ -205,5 +211,11 @@ canvas {
     }
     to {
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nextBtn {
+        font-size: 40px;
     }
 }

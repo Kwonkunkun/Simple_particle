@@ -21,8 +21,8 @@ export default class ParticleGroup {
     init() {
         //4*하는 이유는 data는 rgba순임으로!! 각 픽셀의 색을 얻어와서 다시 그려주는거임!!
         this.particleGroup = [];
-        for (let y = 0; y < this.data.height; y++) {
-            for (let x = 0; x < this.data.width; x++) {
+        for (let y = 0; y < this.data.height; y += 2) {
+            for (let x = 0; x < this.data.width; x += 2) {
                 if (this.data.data[y * 4 * this.data.width + x * 4 + 3] > 128) {
                     let positionX = x;
                     let positionY = y;
@@ -45,7 +45,7 @@ export default class ParticleGroup {
                             positionX * 4,
                             positionY * 4,
                             color,
-                            3
+                            6
                         )
                     );
                 }

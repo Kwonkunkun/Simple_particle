@@ -17,18 +17,35 @@ class App {
         this.mouse = {
             x: null,
             y: null,
-            radius: 50,
+            radius: 120,
         };
+
+        //모바일일때는 크기 다르게
+        let particleImgWidth = 100;
+        let particleImgHeight = 65;
+        let backgroundImgWidth = 400;
+        let backgroundImgHeight = 260;
+
+        if (this.isMobile === false) {
+            particleImgWidth *= 2;
+            particleImgHeight *= 2;
+            backgroundImgWidth *= 2;
+            backgroundImgHeight *= 2;
+        }
 
         this.particleGroup = new ParticleGroup(
             this.ctx,
             this.stageWidth,
             this.stageHeight,
             img,
-            100,
-            65
+            particleImgWidth,
+            particleImgHeight
         );
-        this.backGround = new Background(400, 260);
+        this.backGround = new Background(
+            backgroundImgWidth,
+            backgroundImgHeight
+        );
+
         this.rainGroup = new RainGroup(this.stageWidth, this.stageHeight);
         this.SnowGroup = new SnowGroup(this.stageWidth, this.stageHeight);
 

@@ -46,7 +46,7 @@ export default class Particle {
         let forceDirectionY = dy / distance;
 
         //max distance, past that the force will be 0
-        const maxDistance = 50;
+        const maxDistance = 120;
         let force = (maxDistance - distance) / maxDistance;
         if (force < 0) force = 0;
 
