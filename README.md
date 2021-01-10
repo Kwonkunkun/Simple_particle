@@ -35,6 +35,20 @@
 + 폰트 에러 고침
 ```
 
+### 1/9 ~ 1/10
+<img width="597" alt="gif" src="https://user-images.githubusercontent.com/59603575/104115376-3f56aa00-5352-11eb-93e8-072de55c20e3.gif">
+
+```diff
++ 추가사항 : button 형식 변경
+
++ 초기에 파티클이 흩어졌다가 모이게 하는 효과 추가
+```
+
+
+
+
+
+
 
 
 
