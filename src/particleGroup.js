@@ -20,6 +20,9 @@ export default class ParticleGroup {
     }
 
     init() {
+        if (this.data === undefined) {
+            this.init();
+        }
         //4*하는 이유는 data는 rgba순임으로!! 각 픽셀의 색을 얻어와서 다시 그려주는거임!!
         this.particleGroup = [];
         for (let y = 0; y < this.data.height; y += 2) {
@@ -62,9 +65,6 @@ export default class ParticleGroup {
     }
 
     draw(ctx, mouse) {
-        if (this.data === undefined) {
-            this.init();
-        }
         for (let i = 0; i < this.particleGroup.length; i++) {
             this.particleGroup[i].draw(ctx, mouse);
         }
