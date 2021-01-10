@@ -2,11 +2,12 @@
 import Particle from "./particle.js";
 
 export default class ParticleGroup {
-    constructor(ctx, stageWidth, stageHeight, png, width, height) {
+    constructor(ctx, stageWidth, stageHeight, png, width, height, onEffect) {
         this.stageWidth = stageWidth;
         this.stageHeight = stageHeight;
         this.pngWidth = width;
         this.pngHeight = height;
+        this.onEffect = onEffect;
         png.width = width;
         png.height = height;
 
@@ -45,7 +46,8 @@ export default class ParticleGroup {
                             positionX * 4,
                             positionY * 4,
                             color,
-                            6
+                            6,
+                            this.onEffect
                         )
                     );
                 }

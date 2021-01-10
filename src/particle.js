@@ -9,12 +9,18 @@ export default class Particle {
         x,
         y,
         color,
-        size
+        size,
+        onEffect
     ) {
         this.stageWidth = stageWidth;
         this.stageHeight = stageHeight;
-        this.x = x + this.stageWidth / 2 - pngWidth * 2;
-        this.y = y + this.stageHeight / 2 - 50 - pngHeight * 2;
+        if (onEffect) {
+            this.x = Math.random() * this.stageWidth;
+            this.y = Math.random() * this.stageHeight;
+        } else {
+            this.x = x + stageWidth / 2 - pngWidth * 2;
+            this.y = y + stageHeight / 2 - 50 - pngHeight * 2;
+        }
         this.color = color;
         this.size = size;
         this.baseX = x + stageWidth / 2 - pngWidth * 2;
@@ -59,11 +65,11 @@ export default class Particle {
         } else {
             if (this.x !== this.baseX) {
                 let dx = this.x - this.baseX;
-                this.x -= dx / 10;
+                this.x -= dx / 50;
             }
             if (this.y !== this.baseY) {
                 let dy = this.y - this.baseY;
-                this.y -= dy / 10;
+                this.y -= dy / 50;
             }
         }
     }

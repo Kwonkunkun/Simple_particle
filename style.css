@@ -15,10 +15,10 @@ button {
 
 .main-container.fade-in {
     display: block;
-    animation: fadein 5s;
-    -moz-animation: fadein 5s; /* Firefox */
-    -webkit-animation: fadein 5s; /* Safari and Chrome */
-    -o-animation: fadein 5s; /* Opera */
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
 }
 
 html {
@@ -128,10 +128,10 @@ a {
 }
 
 .loading-container.fade-out {
-    animation: fadeout 5s;
-    -moz-animation: fadeout 5s; /* Firefox */
-    -webkit-animation: fadeout 5s; /* Safari and Chrome */
-    -o-animation: fadeout 5s; /* Opera */
+    animation: fadeout 3s;
+    -moz-animation: fadeout 3s; /* Firefox */
+    -webkit-animation: fadeout 3s; /* Safari and Chrome */
+    -o-animation: fadeout 3s; /* Opera */
     animation-fill-mode: forwards;
 }
 
