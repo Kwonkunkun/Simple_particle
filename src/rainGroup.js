@@ -15,8 +15,8 @@ export default class RainGroup {
                 const rain = new Rain(
                     Math.random() * this.stageHeight,
                     Math.random() * this.stageHeight,
-                    Math.random() * 3,
-                    Math.random() * 5 + 5
+                    Math.random() * 3 + 1,
+                    Math.random() * 4 + 5
                 );
                 rain.resize(this.stageWidth, this.stageWidth);
                 temp.push(rain);

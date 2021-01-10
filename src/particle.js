@@ -14,11 +14,11 @@ export default class Particle {
         this.stageWidth = stageWidth;
         this.stageHeight = stageHeight;
         this.x = x + this.stageWidth / 2 - pngWidth * 2;
-        this.y = y + this.stageHeight / 2 - pngHeight * 2;
+        this.y = y + this.stageHeight / 2 - 50 - pngHeight * 2;
         this.color = color;
         this.size = size;
         this.baseX = x + stageWidth / 2 - pngWidth * 2;
-        this.baseY = y + stageHeight / 2 - pngHeight * 2;
+        this.baseY = y + stageHeight / 2 - 50 - pngHeight * 2;
         this.density = Math.random() * 10 + 2;
     }
 
@@ -46,7 +46,7 @@ export default class Particle {
         let forceDirectionY = dy / distance;
 
         //max distance, past that the force will be 0
-        const maxDistance = 120;
+        const maxDistance = 100;
         let force = (maxDistance - distance) / maxDistance;
         if (force < 0) force = 0;
 
