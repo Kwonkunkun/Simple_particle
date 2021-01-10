@@ -184,9 +184,9 @@ async function preloadData() {
 
     //동기식
     const backImgs = [
-        `./Img/ver_1/background1.png`,
-        `./Img/ver_1/background2.png`,
-        `./Img/ver_1/background3.png`,
+        `./Img/ver_2/background1.png`,
+        `./Img/ver_2/background2.png`,
+        `./Img/ver_2/background3.png`,
     ];
 
     Preloader.parallel(backImgs, 0);
